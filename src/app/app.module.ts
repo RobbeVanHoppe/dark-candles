@@ -8,6 +8,7 @@ import {CommonModule} from "@angular/common";
 import {CandlesPage} from "./candles-page/candles-page.component";
 import {AboutPage} from "./about-page/about-page.component";
 import {CandleCard} from "./candles-page/candle-card.component";
+import {LoginPage} from "./login/login-page.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {CandleCard} from "./candles-page/candle-card.component";
     NavBar,
     CandlesPage,
     AboutPage,
-    CandleCard
+    CandleCard,
+    LoginPage
   ],
   imports: [
     BrowserModule,
