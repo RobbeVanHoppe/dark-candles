@@ -8,7 +8,9 @@ import {CommonModule} from "@angular/common";
 import {CandlesPage} from "./candles-page/candles-page.component";
 import {AboutPage} from "./about-page/about-page.component";
 import {CandleCard} from "./candles-page/candle-card.component";
-import {LoginPage} from "./login/login-page.component";
+import {LoginPage} from "./login-page/login-page.component";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {RegisterPage} from "./register-page/register-page.component";
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import {LoginPage} from "./login/login-page.component";
     CandlesPage,
     AboutPage,
     CandleCard,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import {Component} from "@angular/core";
+import {faLock, faUser} from  "@fortawesome/free-solid-svg-icons";
+
 
 @Component({
   selector: 'LoginPage',
@@ -6,5 +8,6 @@ import {Component} from "@angular/core";
 })
 
 export class LoginPage {
-
+  faLock = faLock
+  faUser = faUser;
 }
