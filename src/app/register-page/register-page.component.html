@@ -7,12 +7,12 @@
 
 
             <div class="field">
-              <label for="password" class="label">Username</label>
+              <label for="user-name" class="label">Username</label>
               <div class="control has-icons-left">
-                <input id="first-name" type="text" placeholder="Username" class="input is-primary has-text-dark"
-                  required>
+                <input id="user-name" type="text" placeholder="Username" class="input is-primary has-text-dark"
+                       required>
                 <span class="icon is-small is-left">
-                  <!--                  <fa-icon [icon]="faLock"></fa-icon>-->
+                  <fa-icon [icon]="faUser" />
                 </span>
               </div>
             </div>
@@ -20,10 +20,10 @@
             <div class="field">
               <label for="email" class="label">Email</label>
               <div class="control has-icons-left">
-                <input id="email" type="email" placeholder="example@gmail.com" class="input is-primary has-text-dark"
-                  required>
+                <input id="email" type="email" placeholder="example@example.com" class="input is-primary has-text-dark"
+                       required>
                 <span class="icon is-small is-left">
-                  <!--                  <fa-icon [icon]="faUser"></fa-icon>-->
+                  <fa-icon [icon]="faEnvelope" />
                 </span>
               </div>
             </div>
@@ -32,9 +32,9 @@
               <label for="password" class="label">Password</label>
               <div class="control has-icons-left">
                 <input id="password" type="password" placeholder="*******" class="input is-primary has-text-dark"
-                  required>
+                       required>
                 <span class="icon is-small is-left">
-                  <!--                  <fa-icon [icon]="faLock"></fa-icon>-->
+                  <fa-icon [icon]="faLock" />
                 </span>
               </div>
             </div>
@@ -43,9 +43,9 @@
               <label for="password-check" class="label">Retype Password</label>
               <div class="control has-icons-left">
                 <input id="password-check" type="password" placeholder="*******" class="input is-primary has-text-dark"
-                  required>
+                       required>
                 <span class="icon is-small is-left">
-                  <!--                  <fa-icon [icon]="faLock"></fa-icon>-->
+                  <fa-icon [icon]="faLock" />
                 </span>
               </div>
             </div>
@@ -54,9 +54,9 @@
               <label for="first-name" class="label">First Name</label>
               <div class="control has-icons-left">
                 <input id="first-name" type="text" placeholder="First Name" class="input is-primary has-text-dark"
-                  required>
+                       required>
                 <span class="icon is-small is-left">
-                  <!--                  <fa-icon [icon]="faLock"></fa-icon>-->
+                  <fa-icon [icon]="faIdCard" />
                 </span>
               </div>
             </div>
@@ -65,30 +65,56 @@
               <label for="last-name" class="label">Last Name</label>
               <div class="control has-icons-left">
                 <input id="last-name" type="text" placeholder="Last Name" class="input is-primary has-text-dark"
-                  required>
+                       required>
                 <span class="icon is-small is-left">
-                  <!--                  <fa-icon [icon]="faLock"></fa-icon>-->
+                  <fa-icon [icon]="faIdCard" />
                 </span>
               </div>
             </div>
 
-            <div class="field is-full">
-              <label for="street" class="label">Street</label>
-              <div class="inputs columns m-1">
-                <div class="control has-icons-left">
-                  <input id="street" type="text" placeholder="Street" class="input is-primary has-text-dark column" required>
-                  <span class="icon is-small is-left">
-                    <!--                  <fa-icon [icon]="faLock"></fa-icon>-->
-                  </span>
-                </div>
-                <div class="control is-align-content-flex-end has-icons-left">
-                  <input id="house-number" type="number" placeholder="Nr" class="input is-primary has-text-dark column is-one-fifth is-narrow ml-2"
-                    required>
-                </div>
-        
+            <div class="field">
+              <label for="phone-number" class="label">Phone Number</label>
+              <div class="control has-icons-left">
+                <input id="phone-number" type="tel" placeholder="+32 0123 45 67 89" class="input is-primary has-text-dark"
+                       required>
+                <span class="icon is-small is-left">
+                  <fa-icon [icon]="faPhone" />
+                </span>
               </div>
             </div>
 
+            <div class="field">
+              <label for="street" class="label">Address</label>
+              <div class="inputs columns">
+                <div class="control has-icons-left column is-8">
+                  <input id="street" type="text" placeholder="Street" class="input is-primary has-text-dark" required>
+                  <span class="icon is-small is-left m-3">
+                    <fa-icon [icon]="faHouse" />
+                  </span>
+                </div>
+                <div class="control column">
+                  <input id="house-number" type="number" placeholder="Nr" class="input is-primary has-text-dark"
+                         required>
+                </div>
+              </div>
+            </div>
+
+            <div class="field ">
+              <label for="post-code" class="label">City & Postal Code</label>
+              <div class="inputs columns">
+                <div class="control has-icons-left column is-8">
+                  <input id="city" type="text" placeholder="City" class="input is-primary has-text-dark"
+                         required>
+                  <span class="icon is-small is-left m-3">
+                    <fa-icon [icon]="faLocationdot" />
+                </span>
+                </div>
+                <div class="control column">
+                  <input id="post-code" type="number" placeholder="Code" class="input is-primary has-text-dark"
+                         required>
+                </div>
+              </div>
+            </div>
 
             <div class="field is-flex is-justify-content-space-between mt-5">
               <button class="button is-primary">

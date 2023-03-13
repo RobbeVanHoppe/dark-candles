@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-//import {faLock, faUser} from  "@fortawesome/free-solid-svg-icons";
+import {faLock, faUser, faEnvelope, faIdCard, faHouse, faLocationDot, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'RegisterPage',
@@ -7,5 +7,11 @@ import {Component} from "@angular/core";
 })
 
 export class RegisterPage {
-
+  faUser = faUser;
+  faLock = faLock;
+  faEnvelope = faEnvelope;
+  faIdCard = faIdCard;
+  faHouse = faHouse;
+  faLocationdot = faLocationDot;
+  faPhone = faPhone;
 }
