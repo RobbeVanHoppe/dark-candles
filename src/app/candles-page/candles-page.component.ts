@@ -1,5 +1,5 @@
-import {Component} from "@angular/core";
-import {Candle} from "./Candle";
+import { Component } from "@angular/core";
+import { Candle } from "./Candle";
 
 @Component({
   selector: 'candles-page',
@@ -16,4 +16,9 @@ export class CandlesPage {
     new Candle(4, 15, 10, 'Zwarte kaars met witte randjes en andere shit'),
     new Candle(5, 10, 20, 'Kaars met bolletjes en andere gekke vormpjes')
   ]
+
+  activeDiv: number = 1;
+  SelectActive(id: number): void {
+    this.activeDiv = id;
+  }
 }
