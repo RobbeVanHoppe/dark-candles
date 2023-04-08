@@ -1,18 +1,20 @@
 <div id="candle-page-wrapper" class=" columns">
   <div id="side-bar"
     class="column is-one-fifth-desktop is-hidden-mobile as-text-light is-fixed is-flex is-flex-direction-column">
-    <a class="nav-item is-tab is-full-desktop has-text-grey-light py-5 mt-5 is-size-4"
-      [ngClass]="{'active' : this.activeDiv === 1}" (click)="SelectActive(1)">
-      <span class="icon"><i class="fa fa-info"></i></span> Candles
-    </a>
-    <a class="nav-item is-tab is-full-desktop has-text-grey-light py-5 is-size-4"
-      [ngClass]="{'active' : this.activeDiv === 2}" (click)="SelectActive(2)">
-      <span class="icon"><i class="fa fa-info"></i></span> Roomspray
-    </a>
-    <a class="nav-item is-tab is-full-desktop has-text-grey-light py-5 is-size-4"
-      [ngClass]="{'active' : this.activeDiv === 3}" (click)="SelectActive(3)">
-      <span class="icon"><i class="fa fa-info"></i></span> Totebags
-    </a>
+    <div id="nav-tabs" class="is-flex is-flex-direction-column">
+      <a class="nav-item is-tab is-full-desktop has-text-grey-light py-5 mt-5 is-size-4"
+        [ngClass]="{'active' : this.activeDiv === 1}" (click)="SelectActive(1)">
+        <span class="icon"><i class="fa fa-info"></i></span> Candles
+      </a>
+      <a class="nav-item is-tab is-full-desktop has-text-grey-light py-5 is-size-4"
+        [ngClass]="{'active' : this.activeDiv === 2}" (click)="SelectActive(2)">
+        <span class="icon"><i class="fa fa-info"></i></span> Roomspray
+      </a>
+      <a class="nav-item is-tab is-full-desktop has-text-grey-light py-5 is-size-4"
+        [ngClass]="{'active' : this.activeDiv === 3}" (click)="SelectActive(3)">
+        <span class="icon"><i class="fa fa-info"></i></span> Totebags
+      </a>
+    </div>
   </div>
 
 
