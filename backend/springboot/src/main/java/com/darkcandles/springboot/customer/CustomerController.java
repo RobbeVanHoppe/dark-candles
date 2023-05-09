@@ -20,9 +20,6 @@ public class CustomerController {
     @GetMapping("/user")
     public Customer getCustomer(@RequestParam Integer id) {
         Optional<Customer> cust = customerService.getCustomer(id);
-        if (cust.isPresent()) {
-            return (Customer) cust.get();
-        }
-        return null;
+      return (Customer) cust.orElse(null);
     }
 }

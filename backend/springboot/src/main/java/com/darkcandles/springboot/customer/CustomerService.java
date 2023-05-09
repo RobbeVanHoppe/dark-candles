@@ -13,7 +13,7 @@ public class CustomerService {
   private List<Customer> customerList;
 
   public CustomerService() {
-    customerList = new ArrayList<>();
+    this.customerList = new ArrayList<>();
 
     Customer cust1 = new Customer(1, "Jan", "De Man", "john@gmail.com");
     Customer cust2 = new Customer(2, "Jan", "De Man", "john@gmail.com");
