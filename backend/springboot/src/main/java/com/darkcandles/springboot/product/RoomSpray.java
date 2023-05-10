@@ -4,8 +4,8 @@ public class RoomSpray extends Product{
   public String Scent;
   public String Volume;
 
-  public RoomSpray(Integer productId, String description, Integer stock, Double price, String scent, String volume) {
-    super(productId, description, stock, price);
+  public RoomSpray(Integer productId, Character productType, String description, Integer stock, Double price, String scent, String volume) {
+    super(productId, productType, description, stock, price);
     Scent = scent;
     Volume = volume;
   }

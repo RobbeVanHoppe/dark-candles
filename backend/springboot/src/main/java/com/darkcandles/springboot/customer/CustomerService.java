@@ -2,15 +2,12 @@ package com.darkcandles.springboot.customer;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class CustomerService {
 
-  private List<Customer> customerList;
+  private final List<Customer> customerList;
 
   public CustomerService() {
     this.customerList = new ArrayList<>();
@@ -24,10 +21,15 @@ public class CustomerService {
 
   }
 
+  public List<Customer> getAllCustomers() {
+    return customerList;
+  }
+
+
   public Optional<Customer> getCustomer(Integer id) {
     Optional<Customer> optional = Optional.empty();
     for (Customer cust : customerList) {
-      if (id == cust.getCustomerID()) {
+      if (Objects.equals(id, cust.getCustomerID())) {
         optional = Optional.of(cust);
       }
     }
