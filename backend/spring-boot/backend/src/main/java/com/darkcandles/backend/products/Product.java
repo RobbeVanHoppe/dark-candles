@@ -13,13 +13,13 @@ import java.time.LocalDateTime;
 public abstract class Product {
   @Id
   private String id;
-  private Character productType;
+  private ProductType productType;
   private String description;
   private Integer stock;
   private Double price;
   private LocalDateTime created;
 
-  public Product(Character productType, String description, Integer stock, Double price, LocalDateTime created) {
+  public Product(ProductType productType, String description, Integer stock, Double price, LocalDateTime created) {
     this.productType = productType;
     this.description = description;
     this.stock = stock;

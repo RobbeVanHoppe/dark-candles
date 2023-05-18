@@ -1,17 +1,14 @@
-export class Candle {
-  private CandleId: number;
-  Price: number;
-  Stock: number;
-  private Description: string;
+import { Product } from "./Product";
 
-  constructor(CandleId: number, Price: number, Stock: number, Description: string) {
-    this.CandleId = CandleId;
-    this.Price = Price;
-    this.Stock = Stock;
-    this.Description = Description;
-  }
+export class Candle extends Product {
+  private color: string;
+  private scent: string;
+  private shape: string;
 
-  public ToString(): string {
-    return `${this.Description}`;
+  constructor(id: string, productType: string, description: string, stock: number, price: number, created: Date, color: string, scent: string, shape: string) {
+    super(id, productType, description, stock, price, created);
+    this.color = color;
+    this.scent = scent;
+    this.shape = shape;
   }
 }

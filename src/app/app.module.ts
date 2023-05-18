@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBar } from "./navbar.component";
 import { CommonModule } from "@angular/common";
-import { CandlesPage } from "./candles-page/candles-page.component";
+import { ProductPage } from "./candles-page/product-page.component";
 import { AboutPage } from "./about-page/about-page.component";
-import { CandleCard } from "./candles-page/candle-card/candle-card.component";
+import { CandleCard } from "./candles-page/product-card/candle-card.component";
 import { LoginPage } from "./login-page/login-page.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { HttpClientModule } from '@angular/common/http';
 import { RegisterPage } from "./register-page/register-page.component";
 import { AccountPage } from './account-page/account-page.component';
 import { NG_STORE_CONFIG, NgStoreModule, StoreConfiguration } from '@ssougnez/ng-store';
@@ -20,7 +21,7 @@ import { initial } from "./store/states/app.state";
   declarations: [
     AppComponent,
     NavBar,
-    CandlesPage,
+    ProductPage,
     AboutPage,
     CandleCard,
     LoginPage,
@@ -32,7 +33,8 @@ import { initial } from "./store/states/app.state";
     AppRoutingModule,
     CommonModule,
     FontAwesomeModule,
-    NgStoreModule
+    NgStoreModule,
+    HttpClientModule
   ],
   providers: [
     {

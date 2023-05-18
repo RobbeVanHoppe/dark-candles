@@ -7,7 +7,10 @@ public final class Candle extends Product{
   private String scent;
   private String shape;
 
-  public Candle(Character productType, String description, Integer stock, Double price, LocalDateTime created) {
+  public Candle(ProductType productType, String description, Integer stock, Double price, LocalDateTime created, String color, String scent, String shape) {
     super(productType, description, stock, price, created);
+    this.color = color;
+    this.scent = scent;
+    this.shape = shape;
   }
 }

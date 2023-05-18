@@ -32,5 +32,4 @@ public class ProductController {
   public Product createProduct(Product product) {
     return productService.createProduct(product);
   }
-
 }
