@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public abstract class Person {
   @Id
   private String id;
+  private PersonType personType;
   private String firstName;
   private String lastName;
   @Indexed(unique = true)
@@ -18,7 +19,8 @@ public abstract class Person {
   private Address address;
   private String phone;
 
-  public Person(String firstName, String lastName, String email, String password, Address address, String phone) {
+  public Person(PersonType personType, String firstName, String lastName, String email, String password, Address address, String phone) {
+    this.personType = personType;
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;

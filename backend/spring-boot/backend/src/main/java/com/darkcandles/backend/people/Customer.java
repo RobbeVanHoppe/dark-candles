@@ -1,8 +1,14 @@
 package com.darkcandles.backend.people;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Customer extends Person{
-  public Customer(String firstName, String lastName, String email, String password, Address address, String phone) {
-    super(firstName, lastName, email, password, address, phone);
+  public Customer(PersonType personType, String firstName, String lastName, String email, String password, Address address, String phone) {
+    super(personType, firstName, lastName, email, password, address, phone);
+    this.setPersonType(personType);
     this.setFirstName(firstName);
     this.setLastName(lastName);
     this.setEmail(email);
