@@ -1,13 +1,13 @@
-import { NgModule, isDevMode } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBar } from "./navbar.component";
 import { CommonModule } from "@angular/common";
-import { ProductPage } from "./candles-page/product-page.component";
+import { ProductPage } from "./product-page/product-page.component";
 import { AboutPage } from "./about-page/about-page.component";
-import { CandleCard } from "./candles-page/product-card/candle-card.component";
+import { CandleCard } from "./product-page/product-card/candle-card.component";
 import { LoginPage } from "./login-page/login-page.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { HttpClientModule } from '@angular/common/http';

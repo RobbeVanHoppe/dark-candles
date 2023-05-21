@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Candle } from "./Candle";
-import { ProductsService } from "../products.service";
+import {ProductsService} from "../products.service";
 
 @Component({
   selector: 'product-page',
@@ -10,12 +10,16 @@ import { ProductsService } from "../products.service";
 
 export class ProductPage {
   candles: Candle[] = [];
-  constructor(private productsService: ProductsService) {
-    this.productsService.getAllProducts().subscribe(data => {
-      
 
+  constructor(private candleService: ProductsService) {}
+
+  ngOnInit() {
+    this.candleService.getAllCandles().subscribe((candles: Candle[]) => {
+      this.candles = candles;
+      // Do something with the retrieved Candle objects
     });
-   };
+  }
+
 
 
   activeDiv: number = 1;

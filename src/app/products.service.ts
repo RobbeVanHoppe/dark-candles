@@ -1,26 +1,34 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from './candles-page/Product';
-import { Candle } from './candles-page/Candle';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Candle } from './product-page/Candle';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProductsService {
-  BASE_URL:string;
-  products: Product[] = [];
+  private BASE_URL = 'http://localhost:8080/api/products';
 
-  constructor(private http: HttpClient) {
-    this.BASE_URL = "http://localhost:8080/api/products";
+  constructor(private http: HttpClient) {}
+
+  getAllCandles(): Observable<Candle[]> {
+    return this.http
+      .get(`${this.BASE_URL}/type/CANDLE`)
+      .pipe(map((data: any) => this.convertToCandles(data)));
   }
 
-  getAllProducts() {
-    this.getAllCandles().forEach(c => {
-      this.products.push(c as Product);
+  private convertToCandles(data: any[]): Candle[] {
+    return data.map((c: any) => {
+      return new Candle(
+        c.id,
+        c.productType,
+        c.description,
+        c.stock,
+        c.price,
+        c.created,
+        c.color,
+        c.scent,
+        c.shape
+      );
     });
-    this.products.push()
   }
-  getAllCandles(): Candle[] {
-    return this.http.get(`${this.BASE_URL}/type/CANDLE`);
-  };
 }
