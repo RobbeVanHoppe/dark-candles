@@ -1,6 +1,7 @@
 package com.darkcandles.backend.people;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,5 +26,9 @@ public class PeopleService {
 
   public Person createPerson(Person person) {
     return peopleRepository.save(person);
+  }
+
+  public Person login(String email, String password) {
+    return peopleRepository.findByEmailAndPassword(email, password);
   }
 }

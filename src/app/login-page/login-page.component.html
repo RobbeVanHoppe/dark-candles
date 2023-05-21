@@ -7,7 +7,7 @@
             <div class="field">
               <label for="email" class="label">Email</label>
               <div class="control has-icons-left">
-                <input id="email" type="email" placeholder="example@gmail.com" class="input is-primary has-text-dark" required>
+                <input id="email" name="email" type="email" placeholder="example@gmail.com" class="input is-primary has-text-dark" [(ngModel)]="email" required>
                 <span class="icon is-small is-left">
                   <fa-icon [icon]="faUser"></fa-icon>
                 </span>
@@ -16,7 +16,7 @@
             <div class="field">
               <label for="password" class="label">Password</label>
               <div class="control has-icons-left">
-                <input id="password" type="password" placeholder="*******" class="input is-primary has-text-dark" required>
+                <input id="password" name="password" type="password" placeholder="*******" class="input is-primary has-text-dark" [(ngModel)]="password" required>
                 <span class="icon is-small is-left">
                   <fa-icon [icon]="faLock"></fa-icon>
                 </span>
@@ -29,7 +29,7 @@
               </label>
             </div>
             <div class="field is-flex is-justify-content-space-between mt-5">
-              <button class="button is-success" routerLink="/register">
+              <button class="button is-success" (click)="login(email, password)">
                 Login
               </button>
               <button class="button" routerLink="/register">

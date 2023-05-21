@@ -41,10 +41,10 @@ public class BackendApplication {
           "Black",
           "Wood",
           "Square");
-    productRepository.save(candle2);
+//    productRepository.save(candle2);
 
     };
-  };
+  }
 
   // @Bean
   // CommandLineRunner runner(PeopleRepository peopleRepository) {

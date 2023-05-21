@@ -6,7 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/people")
@@ -40,5 +42,18 @@ public class PeopleController {
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
       }
     }
+
+  @PostMapping("/login")
+  public ResponseEntity<Person> login(@RequestBody Map<String, String> loginData) {
+    try {
+      String email = loginData.get("email");
+      String password = loginData.get("password");
+      // Rest of the login logic
+      return new ResponseEntity<>(peopleService.login(email, password), HttpStatus.OK);
+    } catch (Exception e) {
+      return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+  }
+
 
 }

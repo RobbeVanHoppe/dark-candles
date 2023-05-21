@@ -11,4 +11,16 @@ export class Candle extends Product {
     this.scent = scent;
     this.shape = shape;
   }
+
+  getShape(): string {
+    return this.shape;
+  }
+
+  getScent(): string {
+    return this.scent;
+  }
+
+  override toString(): string {
+    return `${this.getShape()} candle that smells like ${this.getScent().toLowerCase()}.`;
+  }
 }

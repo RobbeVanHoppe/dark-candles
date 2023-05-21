@@ -2,11 +2,10 @@ package com.darkcandles.backend.products;
 
 import lombok.AllArgsConstructor;
 import java.util.List;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.web.bind.annotation.*;
+
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/products")
 @AllArgsConstructor
@@ -19,7 +18,7 @@ public class ProductController {
   }
 
   @GetMapping("/type/{productType}")
-  public List<Product> fetchProductsByType(Character productType) {
+  public List<Product> fetchProductsByType(@PathVariable ProductType productType) {
     return productService.getProductsByType(productType);
   }
 

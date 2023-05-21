@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Candle } from "./Candle";
 import {ProductsService} from "../products.service";
+import { OnInit } from "@angular/core";
 
 @Component({
   selector: 'product-page',
@@ -8,13 +9,13 @@ import {ProductsService} from "../products.service";
   styleUrls: ['product-page.component.scss'],
 })
 
-export class ProductPage {
+export class ProductPage implements OnInit{
   candles: Candle[] = [];
 
-  constructor(private candleService: ProductsService) {}
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit() {
-    this.candleService.getAllCandles().subscribe((candles: Candle[]) => {
+    this.productsService.getAllCandles().subscribe((candles: Candle[]) => {
       this.candles = candles;
       // Do something with the retrieved Candle objects
     });

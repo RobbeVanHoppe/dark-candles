@@ -14,7 +14,7 @@ public class ProductService {
     return productRepository.findAll();
   }
 
-  public List<Product> getProductsByType(Character productType) {
+  public List<Product> getProductsByType(ProductType productType) {
     return productRepository.findAllByProductType(productType);
   }
 

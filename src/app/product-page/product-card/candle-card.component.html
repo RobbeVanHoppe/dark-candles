@@ -6,10 +6,10 @@
   </div>
   <div class="card-content has-background-grey">
     <footer class="card-footer is-flex-direction-column is-borderless">
-      <p class="has-text-centered has-text-light" id="description">{{ candle.ToString() }}</p>
+      <p class="has-text-centered has-text-light" id="description">{{ candle.toString() }}</p>
       <div class="stock-and-price is-flex is-justify-content-space-between">
-        <p class="has-text-right mb-3 has-text-light">Stock: {{ candle.Stock }}</p>
-        <p class="has-text-right mb-3 has-text-light">{{ candle.Price }}EUR</p>
+        <p class="has-text-right mb-3 has-text-light">Stock: {{ candle.getStock() }}</p>
+        <p class="has-text-right mb-3 has-text-light">{{ candle.getPrice() }}EUR</p>
       </div>
       <div class="buttons is-justify-content-space-between">
         <button class="button is-info">View Details</button>

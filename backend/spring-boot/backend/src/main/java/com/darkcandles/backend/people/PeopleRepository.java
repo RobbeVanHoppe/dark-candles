@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface PeopleRepository extends MongoRepository<Person, String> {
 
-  abstract List<Person> findAllByPersonType(PersonType personType);
+  List<Person> findAllByPersonType(PersonType personType);
+
+  Person findByEmailAndPassword(String username, String password);
 }
