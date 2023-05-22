@@ -1,6 +1,5 @@
 package com.darkcandles.backend;
 
-import com.darkcandles.backend.people.*;
 import com.darkcandles.backend.products.Candle;
 import com.darkcandles.backend.products.ProductRepository;
 import com.darkcandles.backend.products.ProductType;
@@ -19,29 +18,29 @@ public class BackendApplication {
     SpringApplication.run(BackendApplication.class, args);
   }
 
-  @Bean
-  CommandLineRunner runner(ProductRepository productRepository) {
-    return args -> {
-      Candle candle1 = new Candle(
-          ProductType.CANDLE,
-          "Round candle",
-          10,
-          10.0,
-          LocalDateTime.now(),
-          "Red",
-          "Vanilla",
-          "Round");
-
-      Candle candle2 = new Candle(
-          ProductType.CANDLE,
-          "Square candle",
-          10,
-          15.0,
-          LocalDateTime.now(),
-          "Black",
-          "Wood",
-          "Square");
-//    productRepository.save(candle2);
+//  @Bean
+//  CommandLineRunner runner(ProductRepository productRepository) {
+//    return args -> {
+//      Candle candle1 = new Candle(
+//          ProductType.CANDLE,
+//          "Round candle",
+//          10,
+//          10.0,
+//          LocalDateTime.now(),
+//          "Red",
+//          "Vanilla",
+//          "Round");
+//
+//      Candle candle2 = new Candle(
+//          ProductType.CANDLE,
+//          "Caramel curly candle",
+//          13,
+//          14.95,
+//          LocalDateTime.now(),
+//          "Dark Orange",
+//          "Caramel",
+//          "U shaped");
+    // productRepository.save(candle2);
 
     };
   }

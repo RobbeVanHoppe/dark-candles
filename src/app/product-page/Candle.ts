@@ -20,6 +20,10 @@ export class Candle extends Product {
     return this.scent;
   }
 
+  getImgPath(): string {
+    return `assets/images/${this.getId()}.webp`;
+  }
+
   override toString(): string {
     return `${this.getShape()} candle that smells like ${this.getScent().toLowerCase()}.`;
   }
